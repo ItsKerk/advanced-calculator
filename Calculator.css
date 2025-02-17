@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+}
+
+body{
+    background-image: url(/images/background.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; 
+}
+
+/* === Calculator Header === */
+header{
+    height: 100px;
+    display: flex;
+    margin-top: auto;
+}
+
+h1{
+    font-size: 50px;
+    padding: 10px;
+}
+
+.HeaderDetails{
+    max-width: 1200px;
+    margin:  auto;  
+    display: flex;
+    align-items: center;
+}
+
+.github {
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 6px;
+    border-radius: 25px;
+    display: flex;
+    text-decoration: none;
+}
+
+/* === Empty Space === */
+.empty{
+    height: 10px;
+}
+
+/* === Calculators Box === */
+.Calculator{
+    width:  430px;
+    height: 750px;
+    border: 3px solid black;
+    border-radius: 15px;
+    background-color: #fcf4e5;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 1);
+}
+
+/* === ScreenArea === */
+.ScreenArea{
+    height: 25%;
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* === History === */
+.History{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+img{
+    width: 32px;
+    cursor: pointer;
+    z-index: 1;
+    padding: 3px;
+}
+
+/* === History Pop Up === */
+.HistoryPopUp{
+    height: 230px;
+    width: 250px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 20px;
+    background: #fcf4e5;
+    display: none;                  /* === Change to flex === */
+    align-self: flex-start;
+    flex-direction: column;
+    z-index: 0;
+    position: absolute;
+    overflow-y: auto;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.HistoryText{
+    font-size: 25px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.HistoryText:hover{
+    border-radius: 10px;
+    background-color: #b8f3d7;
+}
+
+/* === .PreviousCalc  === */
+.PreviousCalc{
+    width: 96%;
+    margin: 0px 8px 0px 8px;
+    font-size: 25px;
+    display: inline-block; 
+    white-space: nowrap;
+    text-overflow: ellipsis;         
+    overflow: hidden;          
+}
+
+/* === Input === */
+.InputText {
+    padding: 0px 5px 20px 5px;
+    display: flex;
+}
+
+.Input{
+    height: 100%;
+    width: 100%;
+    font-size: 58px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    background-color: #fcf4e5;  
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* === All Buttons === */
+.AllButtons{
+    height: 75%;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    background-color: #b8f3d7;
+}
+
+/* === Basic === */
+.Basic{
+    width: 100%;
+}
+
+/* === Shared === */
+tr{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+td{
+    font-size: 30px;
+    font-weight: bold;
+    height: 82px;
+    width: 82px;
+    border: 2px solid black;
+    border-radius: 15px;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    background-color: #fcf4e5;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+td:hover {
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 1);
+}
+
+#deleteall{
+    background-color: #ff0340;
+}
+
+#equal{
+    background-color: #27a945;
+}
+
+/* === No Select === */
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noSelect:focus {
+    outline: none !important;
+}
+
+/* === Scrollbar === */
+.HistoryPopUp::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+.HistoryPopUp::-webkit-scrollbar-track {
+    margin-top: 30px;
+    margin-bottom: 3px;
+    border-radius: 15px;
+}
+   
+.HistoryPopUp::-webkit-scrollbar-thumb {
+    background: #b8f3d7;
+    border-radius: 15px;
+}
+
+.HistoryPopUp::-webkit-scrollbar-corner {
+    background-color: transparent; /* Remove the grip square */
+}
+
+/* === Responsive Design === */
+@media screen and (max-width: 450px) {
+    .Calculator{
+        width: 98%;
+    }
+}
